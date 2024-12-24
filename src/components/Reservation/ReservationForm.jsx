@@ -9,7 +9,6 @@ const ReservationForm = () => {
         reset
     } = useForm();
     const onSubmit = (data) => {
-        console.log(data); // Handle form submission here
         // You can send data to your backend API or perform other actions
         reset(); // Reset form after submission
     };
