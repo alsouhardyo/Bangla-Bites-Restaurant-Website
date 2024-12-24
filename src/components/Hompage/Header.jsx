@@ -14,7 +14,6 @@ const Header = () => {
         const handleScroll = () => {
             if (window.scrollY > 200) {
                 setSticky(true);
-                console.log('Updated');
             } else {
                 setSticky(false);
             }
