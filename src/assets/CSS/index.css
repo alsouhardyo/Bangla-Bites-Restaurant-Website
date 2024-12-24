@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Family */
+
+@font-face {
+    font-family: "Recoleta";
+    src: url("../assets/fonts/recoleta-regulardemo.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Custom CSS and Utilities, Components */
+
+@layer components {
+    .flex-center-x {
+        @apply flex justify-center items-center;
+    }
+    .flex-center-y {
+        @apply flex justify-center items-center flex-col;
+    }
+    .flex-between-x {
+        @apply flex justify-between items-center;
+    }
+    .flex-between-y {
+        @apply flex justify-between items-center flex-col;
+    }
+    .container-padding{
+        @apply px-4 md:px-8 lg:px-16 py-8 md:py-10 lg:py-12
+    }
+    .con-shadow{
+        box-shadow: 1px 2px 4px grey;
+    }
+    .btn-transition{
+        @apply duration-300 ease-in-out
+    }
+    .sub-heading{
+        @apply text-base md:text-lg text-accent font-medium tracking-wider
+    }
+    .heading{
+        @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 font-recoleta
+    }
+    .label{
+        @apply block font-recoleta font-medium text-lg
+    }
+    .input{
+        @apply border border-gray-800 h-[40px] lg:h-[50px] lg:px-4 lg:py-2 rounded-sm p-4 focus:border-none focus:outline-accent
+    }
+}
+
+/* Scrollbar Custom CSS */
+
+@layer utilities {
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #ffe8d9; /* A soft, lighter background to contrast the scrollbar thumb */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #fa8a3d; /* Primary accent color */
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #e7792d; /* Slightly darker shade for hover */
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background-color: #cc5f1f; /* Even darker tone for active (dragging) state */
+    }
+}
+
+/* Custom keyframes Navigation Animation */
+.header-sticky{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    animation: nav-animation 0.5s ease-in-out;
+}
+@keyframes nav-animation {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }100%{
+        opacity: 1;
+        transform: translateY(0);
+    }   
+}
+
+/* Swiper Custom CSS */
+.mySwiper .swiper-pagination-bullet {
+    background-color: #fa8a3d !important;
+}
