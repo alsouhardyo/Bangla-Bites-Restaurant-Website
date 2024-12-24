@@ -71,7 +71,7 @@ const Characteristics = () => {
                 viewport={{ once: true }}
             >
                 <img
-                    src="./src/assets/images/pizza-slice.png"
+                    src="/images/pizza-slice.png"
                     alt="image of a pizza slice"
                     loading="lazy"
                     className="w-[200px] lg:w-[250px] xl:w-[280px] h-auto object-cover"

@@ -4,7 +4,7 @@ const AboutBanner = () => {
         <section>
             <div className="relative">
                 <img
-                    src="./src/assets/images/about-banner.jpg"
+                    src="/images/about-banner.jpg"
                     alt="Beautiful restaurant interior"
                     loading="lazy"
                     className="w-full h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] object-cover"

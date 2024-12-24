@@ -30,7 +30,7 @@ const AboutInfo = () => {
             viewport={{ once: true, amount: 0.3 }}
         >
             <motion.img
-                src="./src/assets/images/call-image.jpg"
+                src="/images/call-image.jpg"
                 alt="About info"
                 loading="lazy"
                 className="w-full h-full object-cover rounded-xl shadow-xl"

@@ -4,7 +4,7 @@ const ContactBanner = () => {
         <section>
             <div className="relative">
                 <img
-                    src="./src/assets/images/contact.jpg"
+                    src="/images/contact.jpg"
                     alt="image of the restaurant"
                     loading="lazy"
                     className="w-full h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] object-cover"

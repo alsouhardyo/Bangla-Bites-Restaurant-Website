@@ -100,7 +100,7 @@ const HeroBanner = () => {
                     className="relative h-[400px] md:h-[500px] w-full rounded-2xl overflow-hidden shadow-lg"
                 >
                     <img
-                        src="./src/assets/images/hero-banner.webp"
+                        src="/images/hero-banner.webp"
                         alt="Bangladeshi Cuisine"
                         className="w-full h-full object-cover"
                         loading="lazy"

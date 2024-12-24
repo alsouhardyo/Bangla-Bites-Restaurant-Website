@@ -126,7 +126,7 @@ const Services = () => {
                 className="w-full h-auto"
             >
                 <img
-                    src="./src/assets/images/home-services.webp"
+                    src="/images/home-services.webp"
                     alt="Culinary experience"
                     loading="lazy"
                     className="w-full h-auto object-cover rounded-lg shadow-lg"
