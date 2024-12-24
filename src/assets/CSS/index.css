@@ -6,14 +6,14 @@
 
 @font-face {
     font-family: "Recoleta";
-    src: url("../assets/fonts/recoleta-regulardemo.otf") format("opentype");
+    src: url("/fonts/recoleta-regulardemo.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Montserrat";
-    src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+    src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
