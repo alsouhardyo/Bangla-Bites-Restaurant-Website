@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Header from "./../components/Homepage/Header";
+import Header from "../components/Hompage/Header";
 
 const NotFoundPage = () => {
     const navigate = useNavigate();
