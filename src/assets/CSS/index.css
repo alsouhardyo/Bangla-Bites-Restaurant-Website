@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Overflow Fix */
+
+html, body{
+    overflow-x: hidden !important; 
+}
+
 /* Font Family */
 
 @font-face {
@@ -83,12 +89,11 @@
 }
 
 /* Custom keyframes Navigation Animation */
-.header-sticky{
-    position: sticky;
+.header-effect{
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 10000;
+    z-index: 1000;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
     animation: nav-animation 0.5s ease-in-out;
@@ -96,7 +101,7 @@
 @keyframes nav-animation {
     0%{
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-40px);
     }100%{
         opacity: 1;
         transform: translateY(0);

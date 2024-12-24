@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { TiThMenuOutline } from "react-icons/ti";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
@@ -13,26 +12,25 @@ const Header = () => {
     // Sticky Header
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 300) {
+            if (window.scrollY > 200) {
                 setSticky(true);
+                console.log('Updated');
             } else {
                 setSticky(false);
             }
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
+    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     return (
-        <motion.header
-            className={sticky ? "header-sticky" : "bg-transparent"}
+        <header
+            className={`w-full ${
+                sticky ? "header-effect" : "bg-transparent shadow-none"
+            }`}
         >
             <div className="md:flex-between-x px-8 py-4 md:px-16 md:py-6 lg:py-6">
                 <div className="flex-between-x">
@@ -63,7 +61,7 @@ const Header = () => {
                 <nav
                     className={
                         isMobileMenuOpen
-                            ? "absolute top-0 left-0 shadow-md w-full text-center py-8 bg-white/30 backdrop-blur-lg"
+                            ? "absolute top-0 left-0 z-30 shadow-md w-full text-center py-8 bg-white/30 backdrop-blur-lg"
                             : "hidden md:block"
                     }
                 >
@@ -99,7 +97,7 @@ const Header = () => {
                     </div>
                 </nav>
             </div>
-        </motion.header>
+        </header>
     );
 };
 
