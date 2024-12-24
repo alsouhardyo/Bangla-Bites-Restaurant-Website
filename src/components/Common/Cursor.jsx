@@ -25,7 +25,7 @@ const Cursor = () => {
     return (
         isVisible && (
             <motion.div
-                className="border bg-gray-200/50 backdrop-blur-lg rounded-full w-8 h-8 fixed top-0 left-0 z-[5000] drop-shadow-2xl flex-center-x"
+                className="border bg-gray-200/50 backdrop-blur-lg rounded-full w-8 h-8 fixed top-0 left-0 z-[5000] drop-shadow-2xl flex-center-x hidden lg:block"
                 variants={outerVariants}
                 animate="default"
             >
