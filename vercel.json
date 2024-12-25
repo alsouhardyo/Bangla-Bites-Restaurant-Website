@@ -1,0 +1,28 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/about",
+            "dest": "/"
+        },
+        {
+            "src": "/menu",
+            "dest": "/"
+        },
+        {
+            "src": "/reservation",
+            "dest": "/"
+        },
+        {
+            "src": "/contact",
+            "dest": "/"
+        },
+        {
+            "src": "*",
+            "dest": "/"
+        }
+    ]
+}
