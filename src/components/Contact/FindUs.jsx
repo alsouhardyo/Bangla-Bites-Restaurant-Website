@@ -1,4 +1,3 @@
-import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaHeadphonesSimple } from "react-icons/fa6";
 import { IoMailUnread } from "react-icons/io5";
@@ -7,7 +6,9 @@ const FindUs = () => {
     return (
         <section className="py-6 md:py-10 px-4 space-y-6 md:grid md:grid-cols-2 lg:grid-cols-3 lg:space-y-0 md:gap-6 md:justify-between md:items-center">
             {/* Location */}
-            <div className="flex-center-y gap-4 bg-slate-900 text-white py-6 rounded-lg shadow-lg md:col-span-2 lg:col-span-1">
+            <div
+                className="flex-center-y gap-4 bg-slate-900 text-white py-6 rounded-lg shadow-lg md:col-span-2 lg:col-span-1"
+            >
                 {" "}
                 {/* Occupies 2 columns on md, 1 on lg */}
                 <div className="bg-accent p-4 rounded-lg shadow-lg">
