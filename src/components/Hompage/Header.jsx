@@ -28,7 +28,7 @@ const Header = () => {
     return (
         <header
             className={`w-full ${
-                sticky ? "header-effect" : "bg-transparent shadow-none"
+                sticky ? "" : "bg-transparent shadow-none"
             }`}
         >
             <div className="md:flex-between-x px-8 py-4 md:px-16 md:py-6 lg:py-6">
