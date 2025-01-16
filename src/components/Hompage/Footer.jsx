@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
+import { useForm } from 'react-hook-form';
 
 const Footer = () => {
     const quickLinks = ["Home", "About", "Menu", "Reservation", "Contact"];
@@ -11,8 +12,18 @@ const Footer = () => {
         { name: "Facebook", icon: <FaFacebook /> },
         { name: "Instagram", icon: <FaInstagram /> },
         { name: "Twitter", icon: <FaXTwitter /> },
-        { name: "Youtube", icon: <FaYoutube /> }
+        { name: "Youtube", icon: <FaYoutube /> },
     ];
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset
+    } = useForm();
+    const onSubmit = (data) => {
+        // You can send data to your backend API or perform other actions
+        reset(); // Reset form after submission
+    };
     return (
         <footer className="container-padding space-y-4 md:space-y-6">
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
@@ -28,14 +39,21 @@ const Footer = () => {
                     </div>
                     <div className="space-y-2">
                         <div className="flex flex-col md:flex-row md:justify-start md:items-center md:gap-4">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="input block w-full mb-2 md:w-[60vw] lg:w-[25vw] md:mb-0"
-                            />
-                            <button className="border border-accent hover:bg-accent text-accent hover:text-white font-bold py-2 px-4 rounded w-full md:w-auto">
-                                Join
-                            </button>
+                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="input block w-full mb-2 md:w-[60vw] lg:w-[25vw] md:mb-0"
+                                    {...register("email", {
+                                        required: true,
+                                        pattern:
+                                            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+                                    })}
+                                />
+                                <button type="submit" className="border border-accent hover:bg-accent text-accent hover:text-white font-bold py-2 px-4 rounded w-full md:w-auto">
+                                    Join
+                                </button>
+                            </form>
                         </div>
                         <p className="text-sm text-gray-700">
                             By subscribing, you consent to our Privacy Policy
@@ -57,15 +75,15 @@ const Footer = () => {
                                         ? customerServices
                                         : socialMedia.map((item, i) => ({
                                               ...item,
-                                              key: i
+                                              key: i,
                                           }))
                                     ).map((item, i) => (
                                         <li key={i} className="block">
                                             {index === 2 ? (
-                                                <div className="flex items-center gap-2">
-                                                    {item.icon}
-                                                    {item.name}
-                                                </div>
+                                                <Link to="#" className="flex items-center gap-2 hover:text-accent btn-transition">
+                                                    <p>{item.icon}</p>
+                                                    <p>{item.name}</p>
+                                                </Link>
                                             ) : (
                                                 <Link
                                                     to={

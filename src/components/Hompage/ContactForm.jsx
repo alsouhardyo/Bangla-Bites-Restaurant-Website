@@ -5,10 +5,14 @@ const ContactForm = () => {
     const {
         register,
         handleSubmit,
-        formState: { errors }
+        formState: { errors },
+        reset
     } = useForm();
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = () => {
+        // You can send data to your backend API or perform other actions
+        reset(); // Reset form after submission
+    };
 
     // Animation Variants
     const fadeIn = {
@@ -84,7 +88,7 @@ const ContactForm = () => {
                                     pattern:
                                         /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
                                 })}
-                                placeholder="Email"
+                                placeholder="example1234@example.com"
                                 className="input w-full"
                             />
                         </div>
