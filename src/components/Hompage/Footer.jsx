@@ -38,8 +38,11 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="space-y-2">
-                        <div className="flex flex-col md:flex-row md:justify-start md:items-center md:gap-4">
-                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
+                        <div>
+                            <form
+                                onSubmit={handleSubmit(onSubmit)}
+                                className="flex flex-col md:flex-row md:justify-start md:items-center md:gap-4"
+                            >
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
@@ -47,10 +50,13 @@ const Footer = () => {
                                     {...register("email", {
                                         required: true,
                                         pattern:
-                                            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+                                            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
                                     })}
                                 />
-                                <button type="submit" className="border border-accent hover:bg-accent text-accent hover:text-white font-bold py-2 px-4 rounded w-full md:w-auto">
+                                <button
+                                    type="submit"
+                                    className="border border-accent hover:bg-accent text-accent hover:text-white font-bold py-2 px-4 rounded w-full md:w-auto"
+                                >
                                     Join
                                 </button>
                             </form>
@@ -80,7 +86,10 @@ const Footer = () => {
                                     ).map((item, i) => (
                                         <li key={i} className="block">
                                             {index === 2 ? (
-                                                <Link to="#" className="flex items-center gap-2 hover:text-accent btn-transition">
+                                                <Link
+                                                    to="#"
+                                                    className="flex items-center gap-2 hover:text-accent btn-transition"
+                                                >
                                                     <p>{item.icon}</p>
                                                     <p>{item.name}</p>
                                                 </Link>
