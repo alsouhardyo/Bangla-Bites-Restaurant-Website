@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
     const socialMedia = [
         { name: "Facebook", icon: <FaFacebook /> },
         { name: "Instagram", icon: <FaInstagram /> },
-        { name: "Twitter", icon: <FaTwitter /> },
+        { name: "Twitter", icon: <FaXTwitter /> },
         { name: "Youtube", icon: <FaYoutube /> }
     ];
     return (
