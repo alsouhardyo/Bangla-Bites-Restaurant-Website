@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
     const {
@@ -12,6 +13,16 @@ const ContactForm = () => {
     const onSubmit = () => {
         // You can send data to your backend API or perform other actions
         reset(); // Reset form after submission
+        toast.success("👍 Form submitted successfully", {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     };
 
     // Animation Variants

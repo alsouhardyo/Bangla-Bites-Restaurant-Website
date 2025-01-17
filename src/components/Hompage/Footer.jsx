@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { useForm } from 'react-hook-form';
+import { toast } from "react-toastify";
 
 const Footer = () => {
     const quickLinks = ["Home", "About", "Menu", "Reservation", "Contact"];
@@ -23,6 +24,16 @@ const Footer = () => {
     const onSubmit = (data) => {
         // You can send data to your backend API or perform other actions
         reset(); // Reset form after submission
+        toast.success("👍 Email Sent Successfully", {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     };
     return (
         <footer className="container-padding space-y-4 md:space-y-6">
