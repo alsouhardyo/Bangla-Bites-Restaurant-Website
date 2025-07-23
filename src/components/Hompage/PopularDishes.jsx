@@ -10,8 +10,8 @@ const PopularDishes = () => {
                 "Tender Hilsa fish simmered in a rich mustard seed paste and mustard oil, served with fragrant steamed rice.",
             price: "৳499",
             imageSrc:
-                "https://atanurrannagharrecipe.com/wp-content/uploads/2024/06/Shorshe-Ilish-Recipe.jpg",
-            delay: 0.2
+                "https://images.squarespace-cdn.com/content/v1/5ea5f3913b0ccf06d0ec2563/1647632824420-2U3SJU6ZYW3L8DJQE9GW/Pohela+Boishakh+2021+-+The+Spice+Odyssey+%2850%29.jpg?format=2500w",
+            delay: 0.2,
         },
         {
             name: "Kacchi Biryani",
@@ -20,7 +20,7 @@ const PopularDishes = () => {
             price: "৳399",
             imageSrc:
                 "https://foodfusion.com/wp-content/uploads/2019/01/Kachay-Gosht-ki-Biryani-Recipe-by-Food-fusion-2.jpg",
-            delay: 0.3
+            delay: 0.3,
         },
         {
             name: "Bhuna Khichuri",
@@ -28,8 +28,8 @@ const PopularDishes = () => {
                 "Comforting lentil khichuri paired with slow-cooked beef curry, infused with spices and caramelized onions.",
             price: "৳349",
             imageSrc:
-            "https://rhcaterers.pk/wp-content/uploads/2024/06/BEEF-PULAO.png",
-            delay: 0.4
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNLvRoMD-ztoTL3BQoHX2ZX72mL8wbXQ40-Q&s",
+            delay: 0.4,
         },
         {
             name: "Mishti Doi",
@@ -37,9 +37,9 @@ const PopularDishes = () => {
                 "A traditional dessert of creamy, sweetened yogurt with a caramelized flavor, perfect to end your meal.",
             price: "৳99",
             imageSrc:
-            "https://images.pexels.com/photos/3026801/pexels-photo-3026801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            delay: 0.5
-        }
+                "https://images.pexels.com/photos/3026801/pexels-photo-3026801.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            delay: 0.5,
+        },
     ];
     const rating = [1, 2, 3, 4, 5];
 
